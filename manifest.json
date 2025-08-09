@@ -1,0 +1,22 @@
+
+{
+  "manifest_version": 3,
+  "name": "Steam Market Analyzer",
+  "description": "Аналіз історії купівлі/продажів на Steam Market",
+  "version": "1.0",
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Відкрити Analyzer",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "host_permissions": [
+    "https://steamcommunity.com/market/myhistory*"
+  ]
+}

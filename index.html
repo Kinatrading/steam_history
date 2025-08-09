@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Steam Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Steam Analyzer</h1>
+
+  <label>Зупинити на даті: <input type="text" id="stopDate" value="2 Aug"></label>
+  <button id="analyzeBtn">Аналізувати</button>
+  <button id="loadToDateBtn">📥 Добавити до дати</button>
+  <button id="resetBtn">🧹 Очистити історію</button>
+  <button id="showBtn">📊 Показати таблицю</button>
+
+  <div id="status" style="margin-top:10px; font-style: italic; color: gray;"></div>
+  <div id="results"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
