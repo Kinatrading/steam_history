@@ -101,6 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			  <td colspan="4"><b>Загалом витрачено:</b> ${totalSpent.toFixed(2)}</td>
 			  <td colspan="3"><b>Отримано:</b> ${totalEarned.toFixed(2)}</td>
 			</tr>
+			<tr>
+            <td colspan="6" style="text-align:right;"><b>Чистий прибуток:</b></td>
+             <td><b>${(final.reduce((sum, row) => sum + parseFloat(row.profit), 0)).toFixed(2)}</b></td>
+			</tr>
 		  </tfoot>
 		</table>
 	  `;
@@ -117,8 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let total429 = 0;
 
     while (!stop) {
-      const start = page * 100;
-      const url = `https://steamcommunity.com/market/myhistory/render/?query=&start=${start}&count=100`;
+      const start = page * 500;
+      const url = `https://steamcommunity.com/market/myhistory/render/?query=&start=${start}&count=500`;
 
       status.innerText = `🔄 Парсимо сторінку ${page + 1}... (429: ${total429} разів)`;
 
